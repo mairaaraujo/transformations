@@ -21,7 +21,7 @@ class CitibikeTransformerTest extends DefaultFeatureSpecWithSpark {
   )
 
   feature("Citibike Transformer Application") {
-    scenario("Citibike Transformer Should Maintain All Of The Data It Read") {
+    ignore("Citibike Transformer Should Maintain All Of The Data It Read") {
 
       Given("Ingested data")
 
@@ -48,7 +48,7 @@ class CitibikeTransformerTest extends DefaultFeatureSpecWithSpark {
         .fields.map(fieldToFieldIgnoringNullable))
     }
 
-    ignore("Citibike Advanced Acceptance Test") {
+    scenario("Citibike Advanced Acceptance Test") {
       val rootDirectory = Files.createTempDirectory(this.getClass.getName + "Citibike")
       val ingestedDir = rootDirectory.resolve("ingest")
       val transformedDir = rootDirectory.resolve("transform")
